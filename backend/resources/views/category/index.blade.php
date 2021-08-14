@@ -26,10 +26,10 @@
       <td><img src="{{$cat -> image_url}}" alt="#" class="img-fluid" width="35px"></td>
       <td>
         <form action="{{ route('category.destroy',$cat->id) }}" method="POST">
-          <a href="{{ route('category.edit',$cat->id) }}" class="btn btn-primary">edit</a>
+          <a href="{{ route('category.edit',$cat->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger">delete</button>
+          <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
         </form>
       </td>
     </tr>

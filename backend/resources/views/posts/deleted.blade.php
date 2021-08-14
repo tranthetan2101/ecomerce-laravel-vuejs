@@ -23,10 +23,10 @@
       <td>{{$post->auth -> username}}</td>
       <td>
         <form action="{{route('post.deleted',$post->id)}}" method="POST">
-          <a href="{{route('post.restore',$post->id)}}" class="btn btn-primary">restore</a>
+          <a href="{{route('post.restore',$post->id)}}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger">delete</button>
+          <button type="submit" class="btn btn-danger"><i class="fas fa-calendar-times"></i></button>
         </form>
       </td>
     </tr>

@@ -22,10 +22,10 @@
       <td>{{$item -> name}}</td>
       <td>
         <form action="{{ route('blogs.destroy',$item->id) }}" method="POST">
-          <a href="{{ route('blogs.edit',$item->id) }}" class="btn btn-primary">edit</a>
+          <a href="{{ route('blogs.edit',$item->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger">delete</button>
+          <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
         </form>
       </td>
     </tr>

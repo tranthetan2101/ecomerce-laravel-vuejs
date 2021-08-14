@@ -5,7 +5,6 @@ namespace App\Services\backend;
 use App\Models\Product;
 use App\Models\Product_image;
 use App\Http\Requests\ProductRequest;
-use Illuminate\Database\Eloquent\Model;
 
 class ProductService
 {

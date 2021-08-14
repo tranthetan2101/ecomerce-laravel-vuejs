@@ -28,10 +28,10 @@
       <td>{{$product->category -> name}}</td>
       <td>
         <form action="{{ route('product.deleted',$product->id) }}" method="POST">
-          <a href="{{route('product.restore',$product->id)}}" class="btn btn-success">restore</a>
+          <a href="{{route('product.restore',$product->id)}}" class="btn btn-success"><i class="fas fa-undo"></i></a>
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger">delete</button>
+          <button type="submit" class="btn btn-danger"><i class="fas fa-calendar-times"></i></button>
         </form>
       </td>
     </tr>

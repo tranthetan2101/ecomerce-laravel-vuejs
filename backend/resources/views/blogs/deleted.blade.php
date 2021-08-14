@@ -17,10 +17,10 @@
       <td>{{$item -> name}}</td>
       <td>
         <form action="{{ route('blogs.deleted',$item->id) }}" method="POST">
-          <a href="{{ route('blogs.restore',$item->id) }}" class="btn btn-primary">restore</a>
+          <a href="{{ route('blogs.restore',$item->id) }}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger">delete</button>
+          <button type="submit" class="btn btn-danger"><i class="fas fa-calendar-times"></i></button>
         </form>
       </td>
     </tr>

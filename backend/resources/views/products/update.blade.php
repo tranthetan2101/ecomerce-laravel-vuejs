@@ -54,7 +54,7 @@
         <div class="form-group row">
             <label for="images" class="col-md-1 col-form-label">image</label>
             <div class="col-md-11">
-                <a href="#" role="button" id="lfm" data-preview="holder" class="btn btn-outline-primary">
+                <a href="#" role="button" data-input="image" id="lfm" data-preview="holder" class="btn btn-outline-primary">
                     Choose
                </a>
                 <input type="hidden" id="image" class="form-control" name="image">

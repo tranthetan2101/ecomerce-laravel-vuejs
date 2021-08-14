@@ -17,7 +17,7 @@ class CategoryController extends Controller
         return view('category.create');
     }
     public function store(CategoryRequest $request){
-        $category = $this->categoryService->createCategory($request);
+        $this->categoryService->createCategory($request);
         return redirect()->route('category.index')->with('success','category create successfully');
     }
     public function edit($id){
@@ -25,7 +25,7 @@ class CategoryController extends Controller
         return view('category.update',['category'=>$category]);
     }
     public function update(CategoryRequest $request,$id){
-        $category = $this->categoryService->updateCategory($request,$id);
+        $this->categoryService->updateCategory($request,$id);
         return redirect()->route('category.index')->with('success','category update successfully');
     }
     public function trashed(){

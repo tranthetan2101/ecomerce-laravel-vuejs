@@ -13,12 +13,12 @@
                     <input type="text" class="form-control form-control-user"
                            id="InputEmail" aria-describedby="Email"
                            name="email"
-                           placeholder="Enter Email">
+                           placeholder="Enter Email" value="tantran21012000@gmail.com">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control form-control-user"
                            id="InputPassword" placeholder="Password"
-                           name="password">
+                           name="password" value="tantran2412">
                 </div>
                 <div class="form-group">
                     <div class="custom-control custom-checkbox small">

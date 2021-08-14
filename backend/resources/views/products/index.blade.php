@@ -28,10 +28,10 @@
       <td>{{$product->category -> name}}</td>
       <td>
         <form action="{{ route('product.destroy',$product->id) }}" method="POST">
-          <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary">edit</a>
+          <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-danger">delete</button>
+          <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
         </form>
       </td>
     </tr>

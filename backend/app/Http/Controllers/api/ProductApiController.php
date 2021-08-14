@@ -17,4 +17,8 @@ class ProductApiController extends Controller
         $product = $this->productsApi->getAll();
         return response()->json($product, 200);;
     }
+    public function show($id){
+        $product = $this->productsApi->getProductById($id);
+        return response()->json(['product'=>$product],200);
+    }
 }

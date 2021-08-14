@@ -2,7 +2,6 @@
 
 
 namespace App\Services\backend;
-use Illuminate\Database\Eloquent\Model;
 use App\Http\Requests\CategoryBlogRequest;
 use App\Models\Category_Blog;
 

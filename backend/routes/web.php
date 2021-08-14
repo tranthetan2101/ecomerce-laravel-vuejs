@@ -6,7 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CategoryBlogController;
 use App\Http\Controllers\PostController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BannerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,4 +70,16 @@ Route::prefix('post')->middleware('auth')->group(function () {
     route::delete('/delete/{id}',[PostController::class,'deleted'])->name('post.deleted');
     route::get('/restore/{id}',[PostController::class,'restored'])->name('post.restore');
     route::get('/trashed',[PostController::class,'trashed'])->name('post.trashed');
+});
+
+Route::prefix('banner')->middleware('auth')->group(function () {
+    Route::get('/index',[BannerController::class,'index'])->name('banner.index');
+    Route::get('/create', [BannerController::class,'create'])->name('banner.create');
+    route::post('/add',[BannerController::class,'store'])->name('banner.store');
+    route::get('/edit/{id}',[BannerController::class,'edit'])->name('banner.edit');
+    route::patch('/update/{id}',[BannerController::class,'update'])->name('banner.update');
+    route::delete('/destroy/{id}',[BannerController::class,'destroy'])->name('banner.destroy');
+    route::delete('/delete/{id}',[BannerController::class,'deleted'])->name('banner.deleted');
+    route::get('/restore/{id}',[BannerController::class,'restore'])->name('banner.restore');
+    route::get('/trashed',[BannerController::class,'trashed'])->name('banner.trashed');
 });

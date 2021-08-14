@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\ProductApiController;
+use App\Http\Controllers\api\BannerApiController;
+use App\Http\Controllers\api\CategoryApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,4 +21,13 @@ use App\Http\Controllers\api\ProductApiController;
 //});
 Route::prefix('product')->group(function () {
     Route::get('index',[ProductApiController::class,'index']);
+    Route::get('show/{id}',[ProductApiController::class,'show']);
+});
+
+Route::prefix('banner')->group(function () {
+    Route::get('index',[BannerApiController::class,'index']);
+});
+
+Route::prefix('category')->group(function () {
+    Route::get('index',[CategoryApiController::class,'index']);
 });
