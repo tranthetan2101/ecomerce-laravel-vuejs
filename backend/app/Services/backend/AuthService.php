@@ -8,10 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthService
 {
-    //only api
-
-    
-    //only web
     public function loginService(LoginRequest $request){
         $data = [
             'email' => $request->get('email'),

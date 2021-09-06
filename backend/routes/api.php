@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\ProductApiController;
 use App\Http\Controllers\api\BannerApiController;
 use App\Http\Controllers\api\CategoryApiController;
+use App\Http\Controllers\api\AuthApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,6 +20,10 @@ use App\Http\Controllers\api\CategoryApiController;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+Route::prefix('customer')->group(function () {
+    Route::post('register',[AuthApiController::class,'register']);
+    Route::post('login',[AuthApiController::class,'login']);
+});
 Route::prefix('product')->group(function () {
     Route::get('index',[ProductApiController::class,'index']);
     Route::get('show/{id}',[ProductApiController::class,'show']);
